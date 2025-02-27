@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Firma Usługowo-Handlowa Podobiński Hubert - profesjonalny przewóz materiałów budowlanych. Oferujemy transport żwiru, piasku, grysu, klińca, ziemi i masy ziemnoskalnej. Obsługujemy firmy i klientów indywidualnych w okolicach Niecewa i do 50 km.">
+  <meta name="keywords"
+    content="przewóz materiałów budowlanych, transport żwiru, transport piasku, usługi transportowe Niecew, wywrotka, Korzenna, materiały budowlane">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.podobinski-transport.pl/">
+  <meta property="og:title" content="Firma Usługowo-Handlowa Podobiński Hubert | Transport materiałów budowlanych">
+  <meta property="og:description"
+    content="Profesjonalny przewóz materiałów budowlanych w okolicach Niecewa. Transport żwiru, piasku, grysu, klińca i innych materiałów.">
+  <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg">
+
+  <title>Firma Usługowo-Handlowa Podobiński Hubert | Transport materiałów budowlanych</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',
+            secondary: '#F59E0B',
+            dark: '#1F2937',
+            light: '#F3F4F6',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Font Awesome - only necessary icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Google Fonts - Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Custom styles */
+    .phone-number {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      position: relative;
+    }
+
+    .phone-number::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: transparent;
+    }
+
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+</head>
+
+<body>
+  <noscript>Musisz włączyć JavaScript, aby uruchomić tę aplikację.</noscript>
+  <div id="root"></div>
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Firma Usługowo-Handlowa Podobiński Hubert",
+      "image": "%PUBLIC_URL%/og-image.jpg",
+      "description": "Profesjonalny przewóz materiałów budowlanych. Transport żwiru, piasku, grysu, klińca i innych materiałów.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Niecew 67",
+        "addressLocality": "Korzenna",
+        "postalCode": "33-322",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.6892,
+        "longitude": 20.8731
+      },
+      "telephone": "+48-XXX-XXX-XXX",
+      "url": "https://www.podobinski-transport.pl/",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "07:00",
+        "closes": "18:00"
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 49.6892,
+          "longitude": 20.8731
+        },
+        "geoRadius": 50000
+      },
+      "areaServed": [
+        "Niecew",
+        "Korzenna",
+        "Nowy Sącz",
+        "Grybów",
+        "Bobowa",
+        "Łużna",
+        "Ciężkowice",
+        "Łososina Dolna",
+        "Chełmiec",
+        "Gródek nad Dunajcem"
+      ]
+    }
+  </script>
+</body>
+
+</html>

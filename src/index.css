@@ -1,0 +1,133 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Dyrektywy Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom variables i style zorganizowane według warstw Tailwind */
+@layer base {
+  :root {
+    --primary: #1E3A8A;
+    --secondary: #F59E0B;
+    --light: #F3F4F6;
+    --dark: #1F2937;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    color: var(--dark);
+  }
+}
+
+/* Własne komponenty */
+@layer components {
+  /* Phone number protection */
+  .phone-number {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    position: relative;
+  }
+
+  .phone-number::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+  }
+}
+
+/* Własne klasy utilities */
+@layer utilities {
+  /* Color utilities */
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .text-secondary {
+    color: var(--secondary);
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+
+  .bg-light {
+    background-color: var(--light);
+  }
+
+  .bg-dark {
+    background-color: var(--dark);
+  }
+
+  /* Text shadow utility */
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Drop shadow */
+  .drop-shadow-lg {
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) 
+           drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+  }
+
+  .drop-shadow-md {
+    filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) 
+           drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
+  }
+
+  /* Transition */
+  .transition {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .duration-300 {
+    transition-duration: 300ms;
+  }
+
+  .duration-500 {
+    transition-duration: 500ms;
+  }
+}
+
+/* Custom animations - poza warstwami, ponieważ te animacje będą nadpisywać animacje Tailwind */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
